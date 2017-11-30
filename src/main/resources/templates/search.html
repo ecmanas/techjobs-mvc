@@ -49,6 +49,7 @@
         </div>-->
 
     <div class="container body-content">
+        <h1 th:if="${jobs}" th:text="${jobs.size() + ' Result(s)'}"></h1>
     <div th:if="${jobs} and ${jobs.size()}" >
         <table th:each="job : ${jobs}">
             <tr th:each="jobField : ${job}">
@@ -59,17 +60,6 @@
         </table>
     </div>
     </div>
-
-
-        <!-- <div th:if="${items} and ${items.size()}">
-
-            <table>
-                <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
-                    <td th:text="${item}"></td>
-                </tr>
-            </table>
-
-        </div>-->
 
 
 </div>
